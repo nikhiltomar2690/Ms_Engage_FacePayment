@@ -2,5 +2,6 @@
     <string name="app_name">msengage</string>
 
     <string name="firstone">Make Paying Secure With\nFace</string>
-    <string name="signuplink">Don\'t Have An Account ?<font color = "#01FEDD"><u> SignUp</u></font></string>
+    <string name="signuplink">Don\'t Have An Account ?<font color="#01FEDD"><u> SignUp</u></font></string>
+    <string name="textview">TextView</string>
 </resources>

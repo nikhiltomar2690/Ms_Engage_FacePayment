@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Msengage">
         <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
             android:name=".otpenter"
             android:exported="false" />
         <activity
