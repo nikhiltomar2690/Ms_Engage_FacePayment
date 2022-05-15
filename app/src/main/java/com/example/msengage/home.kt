@@ -1,7 +1,9 @@
 package com.example.msengage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
 
 class home : AppCompatActivity() {
@@ -13,6 +15,19 @@ class home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         auth= FirebaseAuth.getInstance()
         var currentUser=auth.currentUser
+
+        val logout =findViewById<Button>(R.id.idLogout)
+
+        if(currentUser==null){
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
+
+        logout.setOnClickListener{
+            auth.signOut()
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
 
     }
 }
