@@ -41,7 +41,7 @@ class otpenter : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(applicationContext, home::class.java))
+                    startActivity(Intent(applicationContext, signup::class.java))
                     finish()
 // ...
                 } else {
