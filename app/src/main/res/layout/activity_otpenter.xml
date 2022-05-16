@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:gravity="center|bottom"
         android:layout_weight="1">
         <ImageView
@@ -21,45 +22,49 @@
             android:src="@drawable/otpimage"
             android:paddingBottom="40dp"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_weight="1"
         android:gravity="bottom|center"
-        android:layout_weight="1">
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
-            android:paddingLeft="40dp"
             android:layout_height="wrap_content"
-            android:text="Verify Mobile"
-            android:paddingBottom="15dp"
-            android:textSize="20sp"
             android:fontFamily="@font/poppinssemibold"
-            android:textColor="@color/white"/>
+            android:paddingLeft="40dp"
+            android:paddingBottom="15dp"
+            android:text="Verify Mobile"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
         <com.chaos.view.PinView
             android:id="@+id/id_otp"
+            style="@style/PinWidget.PinView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:itemCount="6"
+            app:itemSpacing="10dp"
             android:layout_margin="10dp"
-            android:itemBackground="#F4F6F9"
             android:cursorVisible="true"
-            app:lineColor="#2196F3"
-            android:textColor="#1F1F1F"
             android:inputType="number"
-            app:hideLineWhenFilled="true"
-            style="@style/PinWidget.PinView"
-            app:itemRadius="5dp"/>
-        <Button
+            android:textColor="@color/white"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemRadius="5dp"
+            app:lineColor="@color/neongreen" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/verifyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="@drawable/buttonround"
+            android:fontFamily="@font/poppinssemibold"
             android:text="Verify"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppinssemibold"
-            android:layout_margin="40dp"
-            android:textColor="#ffffff"
-            android:background="@drawable/buttonround"
-            />
+            android:textColor="@color/black" />
     </LinearLayout>
 </LinearLayout>

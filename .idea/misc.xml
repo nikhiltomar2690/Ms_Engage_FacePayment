@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/Msfaceapp/app/src/main/res/drawable/bttnround.xml" value="0.167" />
+        <entry key="..\:/Android Projects/Msfaceapp/app/src/main/res/layout/activity_login.xml" value="0.259375" />
+        <entry key="..\:/Android Projects/Msfaceapp/app/src/main/res/layout/activity_main.xml" value="0.2504528985507246" />
+        <entry key="..\:/Android Projects/Msfaceapp/app/src/main/res/layout/activity_otpenter.xml" value="0.259375" />
         <entry key="..\:/Android Projects/msengage/app/src/main/res/drawable-v24/buttonround.xml" value="0.1585" />
         <entry key="..\:/Android Projects/msengage/app/src/main/res/drawable/bttnround.xml" value="0.1585" />
         <entry key="..\:/Android Projects/msengage/app/src/main/res/layout/activity_login.xml" value="0.23007246376811594" />
