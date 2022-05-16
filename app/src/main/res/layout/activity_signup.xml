@@ -49,6 +49,7 @@
         android:height="52dp"
         android:background="@drawable/bttnround"
         android:hint="Enter Phone Number"
+        android:inputType="phone"
         android:padding="16dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
