@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinssemibold"
         android:textColor="@color/white"
-        android:text="Buying gamepacks made easier"
+        android:text="G-commerce"
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

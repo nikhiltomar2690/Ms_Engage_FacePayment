@@ -5,45 +5,301 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@color/black">
+    android:background="@color/black"
+    >
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsb"
+        android:text="Gamezo"
+
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome"
-
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="201dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/sansb"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text=" Latest Accessories"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <ImageView
+        android:id="@+id/hyperx"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/hyper"
+
+        app:layout_constraintBottom_toTopOf="@+id/cod"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817" />
+
+
+    <ImageView
+        android:id="@+id/fortnite"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/fortn"
+        app:layout_constraintBottom_toTopOf="@+id/fifa"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942" />
+
+    <ImageView
+        android:id="@+id/cod"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/codd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <ImageView
+        android:id="@+id/fifa"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="308dp"
+
+        android:src="@drawable/football"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/Buydisc"
+        android:layout_width="201dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/sansb"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="Buy at discount"
         android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idLogout"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buy"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/buttonround"
         android:fontFamily="@font/poppinssemibold"
-        android:textSize="21sp"
-        app:layout_constraintVertical_bias="0.66" />
+        android:text="Buy"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:background="@drawable/greybg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="172dp"
-        app:layout_constraintBottom_toTopOf="@+id/idLogout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/idLogout"
-        android:layout_width="211dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="116dp"
-        android:text="Logout"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/poppinssemibold"
-        android:textAllCaps="false"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/valoicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+
+    <TextView
+        android:id="@+id/pro1"
+        android:layout_width="222dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/gilroybold"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="Valorant Batttlepass"
+        android:textColor="@color/white"
+        android:textSize="14.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <TextView
+        android:id="@+id/pro2"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="124dp"
+        android:fontFamily="@font/gilroybold"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="₹7999"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buy1"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/buttonround"
-        />
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Buy"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+
+        android:id="@+id/imageView2"
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:background="@drawable/greybg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/pro3"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/gilroybold"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="₹7999"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/gtaicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <TextView
+        android:id="@+id/pro33"
+        android:layout_width="324dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/gilroybold"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="GTA-5 CD + key"
+        android:textColor="@color/white"
+        android:textSize="14.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <TextView
+        android:id="@+id/pro44"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/gilroybold"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="₹2500"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+
+    <!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/idLogout"-->
+<!--        android:layout_width="211dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:background="@drawable/buttonround"-->
+<!--        android:fontFamily="@font/poppinssemibold"-->
+<!--        android:text="Logout"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.575"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
