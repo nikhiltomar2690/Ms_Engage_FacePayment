@@ -41,6 +41,11 @@ class otpenter : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    // read first name last name from firebase
+                    // check if empty / null
+                    // if yes -> start activity
+                    // else -> main activity or jo bhi
+
                     startActivity(Intent(applicationContext, signup::class.java))
                     finish()
 // ...

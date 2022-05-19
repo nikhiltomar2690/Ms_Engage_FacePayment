@@ -14,10 +14,12 @@ import android.widget.ImageView
 import com.google.android.gms.tasks.OnSuccessListener
 import android.widget.Toast
 import com.google.android.gms.tasks.OnFailureListener
+import com.google.firebase.auth.FirebaseAuth
 import java.io.ByteArrayOutputStream
 
 class uploadcam : AppCompatActivity() {
     private var mstorageref: StorageReference? = null
+    lateinit var auth : FirebaseAuth
     var myimage: ImageView? = null
     override fun onCreate(savedInstances: Bundle?) {
         super.onCreate(savedInstances)
@@ -45,17 +47,20 @@ class uploadcam : AppCompatActivity() {
         val bytes = ByteArrayOutputStream()
         thumbnail!!.compress(Bitmap.CompressFormat.JPEG, 90, bytes)
         val bb = bytes.toByteArray()
-        myimage!!.setImageBitmap(thumbnail)
         uploadToFirebase(bb)
     }
 
     private fun uploadToFirebase(bb: ByteArray) {
+
 //        String phone = "1111";
         // myimages/1111_first.jpg
-//        String phone = FirebaseAuth.getInstance().getCurrentUser(phone)
-        val sr = mstorageref!!.child("myimages/" + ".jpg")
+        val phone = FirebaseAuth.getInstance().currentUser!!.uid
+        val sr = mstorageref!!.child(phone+"/a" + ".jpg")
         sr.putBytes(bb).addOnSuccessListener {
             Toast.makeText(this@uploadcam, "success", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(applicationContext, finalpayface::class.java))
+            finish()
+
         }
             .addOnFailureListener {
                 Toast.makeText(
