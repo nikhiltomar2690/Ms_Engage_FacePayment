@@ -9,19 +9,21 @@
     >
 
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinsb"
-        android:text="Gamezo"
 
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+
+        android:layout_width="340dp"
+        android:layout_height="85dp"
+        android:background="@drawable/greybg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759"
+        tools:ignore="MissingConstraints" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -39,54 +41,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.145" />
 
+
     <ImageView
         android:id="@+id/hyperx"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/hyper"
 
         app:layout_constraintBottom_toTopOf="@+id/cod"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
-
+        app:layout_constraintVertical_bias="0.727" />
 
     <ImageView
         android:id="@+id/fortnite"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/fortn"
-        app:layout_constraintBottom_toTopOf="@+id/fifa"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <ImageView
         android:id="@+id/cod"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/codd"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <ImageView
         android:id="@+id/fifa"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginBottom="308dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="324dp"
 
         android:src="@drawable/football"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="0.837"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -106,17 +107,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.678" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/idLogout"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:background="@drawable/logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -136,15 +127,15 @@
 
     <ImageView
 
-        android:layout_width="340dp"
-        android:layout_height="85dp"
+        android:layout_width="608dp"
+        android:layout_height="68dp"
         android:background="@drawable/greybg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -285,7 +276,107 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9" />
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinsb"
+        android:text="Gamezo"
 
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idLogout"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:background="@drawable/shutdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/idnoti"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:background="@drawable/notification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="HyperX Headphones"
+        android:textColor="#FFFFFF"
+        android:textSize="11.5sp"
+        android:paddingLeft="5dp"
+        android:fontFamily="@font/sansre"
+        app:layout_constraintBottom_toTopOf="@+id/cod"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hyperx"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/forttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Fortnite B-Pass"
+        android:textColor="#FFFFFF"
+        android:textSize="11.5sp"
+        android:fontFamily="@font/sansre"
+        app:layout_constraintBottom_toTopOf="@+id/cod"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hyperx"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/codtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COD Battlepass"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/sansre"
+        android:textSize="11.5sp"
+        app:layout_constraintBottom_toTopOf="@+id/Buydisc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cod"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/fifatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sansre"
+        android:gravity="center"
+        android:text="FIFA'22 Original CD"
+        android:layout_marginStart="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="11.5sp"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintLeft_toRightOf="@+id/codtext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fifa" />
     <!--    <androidx.appcompat.widget.AppCompatButton-->
 <!--        android:id="@+id/idLogout"-->
 <!--        android:layout_width="211dp"-->
