@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".check_gta"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <ImageView
+        android:id="@+id/hyperx"
+        android:layout_width="370dp"
+        android:layout_height="207dp"
+        android:src="@drawable/mscard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <ImageView
+        android:id="@+id/gree"
+        android:layout_width="335dp"
+        android:layout_height="89dp"
+        android:src="@drawable/gp5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="325dp"
+        android:layout_height="230dp"
+        android:src="@drawable/grp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786" />
+
+    <TextView
+        android:id="@+id/Buydisc"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="Checkout"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="* Make sure you keep your face straight while scanning"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buy1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:paddingLeft="10dp"
+        android:paddingBottom="15dp"
+        android:text="If model detects any mismatch , it cancels the payment"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buy1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buy1"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:background="@drawable/buttonround"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Scan Face and Pay"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

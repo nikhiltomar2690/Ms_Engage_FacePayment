@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import com.google.firebase.auth.FirebaseAuth
 
 class home : AppCompatActivity() {
@@ -17,15 +18,41 @@ class home : AppCompatActivity() {
         var currentUser=auth.currentUser
 
         val logout =findViewById<Button>(R.id.idLogout)
-        val buy1 = findViewById<Button>(R.id.buy1)
+        val buygta = findViewById<Button>(R.id.buygta)
+        val buyvalo = findViewById<Button>(R.id.buyvalo)
+
+        val hyperx = findViewById<ImageView>(R.id.hyperx)
+        val fortnite = findViewById<ImageView>(R.id.fortnite)
+        val cod = findViewById<ImageView>(R.id.cod)
+        val fifa = findViewById<ImageView>(R.id.fifa)
 
         if(currentUser==null){
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
 
-        buy1.setOnClickListener{
-            val intent = Intent(this@home, uploadcam::class.java)
+        buygta.setOnClickListener{
+            val intent = Intent(this@home, check_gta::class.java)
+            startActivity(intent)
+        }
+        buyvalo.setOnClickListener{
+            val intent = Intent(this@home, check_valo::class.java)
+            startActivity(intent)
+        }
+        hyperx.setOnClickListener{
+            val intent = Intent(this@home, check_hyperx::class.java)
+            startActivity(intent)
+        }
+        fortnite.setOnClickListener{
+            val intent = Intent(this@home, check_fort::class.java)
+            startActivity(intent)
+        }
+        cod.setOnClickListener{
+            val intent = Intent(this@home, check_cod::class.java)
+            startActivity(intent)
+        }
+        fifa.setOnClickListener{
+            val intent = Intent(this@home, check_fifa::class.java)
             startActivity(intent)
         }
 

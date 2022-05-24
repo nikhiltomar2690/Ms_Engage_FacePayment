@@ -3,17 +3,13 @@ package com.example.msengage
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.StorageReference
 import android.os.Bundle
-import com.example.msengage.R
 import com.google.firebase.storage.FirebaseStorage
 import android.content.Intent
 import android.provider.MediaStore
-import android.app.Activity
 import android.graphics.Bitmap
 import android.view.View
 import android.widget.ImageView
-import com.google.android.gms.tasks.OnSuccessListener
 import android.widget.Toast
-import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FirebaseAuth
 import java.io.ByteArrayOutputStream
 
@@ -58,7 +54,7 @@ class uploadcam : AppCompatActivity() {
         val sr = mstorageref!!.child(phone+"/a" + ".jpg")
         sr.putBytes(bb).addOnSuccessListener {
             Toast.makeText(this@uploadcam, "success", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(applicationContext, finalpayface::class.java))
+            startActivity(Intent(applicationContext, check_hyperx::class.java))
             finish()
 
         }

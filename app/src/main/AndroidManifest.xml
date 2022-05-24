@@ -13,6 +13,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Msengage">
         <activity
+            android:name=".check_gta"
+            android:exported="false" />
+        <activity
+            android:name=".check_valo"
+            android:exported="false" />
+        <activity
+            android:name=".check_fort"
+            android:exported="false" />
+        <activity
+            android:name=".check_cod"
+            android:exported="false" />
+        <activity
+            android:name=".check_fifa"
+            android:exported="false" />
+        <activity
+            android:name=".check_hyperx"
+            android:exported="false" />
+        <activity
             android:name=".finalpayface"
             android:exported="false" />
         <activity
