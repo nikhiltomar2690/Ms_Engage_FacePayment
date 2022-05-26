@@ -15,8 +15,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.gms.tasks.OnSuccessListener
 import android.widget.Toast
+import com.fasterxml.jackson.databind.JsonNode
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -30,7 +36,9 @@ class finalpayface : AppCompatActivity() {
     private var mstorageref: StorageReference? = null
     lateinit var auth : FirebaseAuth
     var myimage: ImageView? = null
+    val objectMapper = jacksonObjectMapper()
 //    lateinit var response: Response
+
 
 
 
@@ -40,11 +48,11 @@ class finalpayface : AppCompatActivity() {
         mstorageref = FirebaseStorage.getInstance().reference
         myimage = findViewById(R.id.img)
         val userid = FirebaseAuth.getInstance().currentUser!!.uid
-//        apirequest()
-
-
-
+        apirequest()
     }
+
+
+
     fun uploadimage(v: View?) {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         startActivityForResult(intent, 101)
@@ -75,10 +83,6 @@ class finalpayface : AppCompatActivity() {
         val sr = mstorageref!!.child(phone+"/b" + ".jpg")
         sr.putBytes(bb).addOnSuccessListener {
             Toast.makeText(this@finalpayface, "success", Toast.LENGTH_SHORT).show()
-//            var file1 ="https://firebasestorage.googleapis.com/v0/b/msengage-otp-9ec4c.appspot.com/o/PKTeFB43HUXufpCIXavK6NNJPYw1%2Fb.jpg?alt=media&token=44935a49-3028-4bc6-9216-c6712bc71513"
-//            var file2 ="https://firebasestorage.googleapis.com/v0/b/msengage-otp-9ec4c.appspot.com/o/PKTeFB43HUXufpCIXavK6NNJPYw1%2Fa.jpg?alt=media&token=86fa63a0-9853-41fe-b626-ef8fe8fbc7d9"
-
-
         }
             .addOnFailureListener {
                 Toast.makeText(
@@ -88,31 +92,38 @@ class finalpayface : AppCompatActivity() {
                 ).show()
             }
     }
+    private fun apirequest() {
 
-//    private fun apirequest() {
-//        val client = OkHttpClient()
-//        println("Reaching Json")
-////        var file1 ="https://firebasestorage.googleapis.com/v0/b/msengage-otp-9ec4c.appspot.com/o/PKTeFB43HUXufpCIXavK6NNJPYw1%2Fb.jpg?alt=media&token=44935a49-3028-4bc6-9216-c6712bc71513"
-////        var file2 ="https://firebasestorage.googleapis.com/v0/b/msengage-otp-9ec4c.appspot.com/o/PKTeFB43HUXufpCIXavK6NNJPYw1%2Fa.jpg?alt=media&token=86fa63a0-9853-41fe-b626-ef8fe8fbc7d9"
-//        val mediaType = "application/x-www-form-urlencoded".toMediaType()
-//        val body = "linkFile1=https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/316600/316605.png&linkFile2=https://s1.stabroeknews.com/images/2020/12/kohli8.png".toRequestBody(mediaType)
-//        val request = Request.Builder()
-//            .url("https://face-verification2.p.rapidapi.com/faceverification")
-//            .post(body)
-//            .addHeader("content-type", "application/x-www-form-urlencoded")
-//            .addHeader("X-RapidAPI-Host", "face-verification2.p.rapidapi.com")
-//            .addHeader("X-RapidAPI-Key", "d8189c82ebmsh1c27016fe57f7edp12d344jsn9cf5d20c3e49")
-//            .build()
-//           client.newCall(request).enqueue(object : Callback{
-//               override fun onResponse(call: Call, response: Response) {
-//                   val body = response.body?.string()
-//                   println(body)
-//               }
-//
-//               override fun onFailure(call: Call, e: IOException) {
-//                   println("Failed to fetch")
-//               }
-//           })
-//
-//    }
+
+        val client = OkHttpClient()
+
+        GlobalScope.launch(Dispatchers.IO) {
+            val mediaType = "application/x-www-form-urlencoded".toMediaType()
+            val body = "linkFile1=https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/kohliheadshot-min.jpg&linkFile2=https://i.pinimg.com/originals/f0/5e/58/f05e58ea32f314a7bb39e2306ef90c14.png".toRequestBody(mediaType)
+            val request = Request.Builder()
+                .url("https://face-verification2.p.rapidapi.com/faceverification")
+                .post(body)
+                .addHeader("content-type", "application/x-www-form-urlencoded")
+                .addHeader("X-RapidAPI-Host", "face-verification2.p.rapidapi.com")
+                .addHeader("X-RapidAPI-Key", "9d366f6cbdmsh32b7c6b43e6bcdep14c956jsn81c1a47b0532")
+                .build()
+
+            client.newCall(request).execute().use {
+                val parsedResponse = parseResponse(it)
+                println(parsedResponse.toString())
+                println(parsedResponse["data"]["resultMessage"])
+                val result = parsedResponse["data"]["similarPercent"].toString().toDouble()
+                if(result > 0.80) println("YES")
+                else println("NO")
+            }
+        }
+
+    }
+    fun parseResponse(response : Response): JsonNode {
+        val body = response.body?.string() ?: ""
+        val jsonBody = objectMapper.readValue<JsonNode>(body)
+        return jsonBody
+    }
+
+
 }
