@@ -26,7 +26,7 @@ class signup : AppCompatActivity() {
 
         btnnext.setOnClickListener{
             userdata()
-            val intent = Intent(this@signup, home::class.java)
+            val intent = Intent(this@signup, uploadcam::class.java)
             startActivity(intent)
         }
 

@@ -50,11 +50,11 @@ class uploadcam : AppCompatActivity() {
 
 //        String phone = "1111";
         // myimages/1111_first.jpg
-        val phone = FirebaseAuth.getInstance().currentUser!!.uid
-        val sr = mstorageref!!.child(phone+"/a" + ".jpg")
+        val userid = FirebaseAuth.getInstance().currentUser!!.uid
+        val sr = mstorageref!!.child(userid+"/a" + ".jpg")
         sr.putBytes(bb).addOnSuccessListener {
             Toast.makeText(this@uploadcam, "success", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(applicationContext, check_hyperx::class.java))
+            startActivity(Intent(applicationContext, home::class.java))
             finish()
 
         }
