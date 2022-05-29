@@ -9,38 +9,54 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/upload2"
-        android:layout_width="200dp"
+        android:layout_width="260dp"
         android:layout_height="50dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textAllCaps="false"
         android:background="@drawable/buttonround"
-        android:text="Camera Capture"
-        android:onClick="uploadimage"
+        android:text="Pay with Face (No UPI required)"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.864"
+        tools:ignore="UsingOnClickInXml" />
 
-    <ImageView
-        android:id="@+id/img1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upload2"
-        app:layout_constraintVertical_bias="0.411" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
 
-    <TextView
-        android:id="@+id/url"
-        android:layout_width="300dp"
-        android:layout_height="170dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img1"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/upload2"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/faceimageani"
+            android:layout_width="315dp"
+            android:layout_height="290dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/face"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="30dp"
+            app:layout_constraintVertical_bias="0.475" />
+
+
+        <ProgressBar
+            android:id="@+id/progressbarr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

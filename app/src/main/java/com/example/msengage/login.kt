@@ -18,9 +18,17 @@ import com.google.firebase.auth.PhoneAuthProvider
 import java.util.concurrent.TimeUnit
 
 class login : AppCompatActivity() {
+
+    //Variable for Firebase Authentication
+    //Activity for Phone-OTP Authentication
+
     lateinit var auth: FirebaseAuth
     lateinit var storedVerificationId:String
+
+    //Progressbar initialising
     val progressbar: ProgressBar? = null
+
+    //Otp Verification
     lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
@@ -34,7 +42,7 @@ class login : AppCompatActivity() {
         progressbar?.visibility = View.GONE
 
 
-
+        //Checking user is null or not , then taking action accordingly
         var currentUser = auth.currentUser
         if(currentUser != null) {
             startActivity(Intent(applicationContext, home::class.java))
@@ -44,6 +52,7 @@ class login : AppCompatActivity() {
             progressbar.visibility = View.VISIBLE
             loginpage()
         }
+
         // Callback function for Phone Auth
         callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -53,6 +62,7 @@ class login : AppCompatActivity() {
                 finish()
             }
 
+            //If verification fails pop a toast
             override fun onVerificationFailed(e: FirebaseException) {
                 progressbar.visibility = View.GONE
                 Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
@@ -73,6 +83,7 @@ class login : AppCompatActivity() {
         }
     }
 
+    //Enter mobile number and then receive OTP & verify user
     private fun loginpage() {
         val mobileNumber=findViewById<EditText>(R.id.phoneno)
         var number=mobileNumber.text.toString().trim()
@@ -88,6 +99,8 @@ class login : AppCompatActivity() {
         }
     }
 
+
+    // function for sending OTP and passing number as parameter in the .setPhoneNumber()
     private fun sendVerificationcode(number: String) {
         val options = PhoneAuthOptions.newBuilder(auth)
             .setPhoneNumber(number) // Phone number to verify

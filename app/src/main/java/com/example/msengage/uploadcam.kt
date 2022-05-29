@@ -8,27 +8,37 @@ import android.content.Intent
 import android.provider.MediaStore
 import android.graphics.Bitmap
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.google.firebase.auth.FirebaseAuth
 import java.io.ByteArrayOutputStream
 
 class uploadcam : AppCompatActivity() {
+
+    //In this activity we uplaod the kyc image to Firebase Storage
     private var mstorageref: StorageReference? = null
     lateinit var auth : FirebaseAuth
-    var myimage: ImageView? = null
     override fun onCreate(savedInstances: Bundle?) {
         super.onCreate(savedInstances)
         setContentView(R.layout.activity_uploadcam)
+
+        //Creating mstorageref for Firebase Storage
         mstorageref = FirebaseStorage.getInstance().reference
-        myimage = findViewById(R.id.img)
+
+
     }
 
+    //Onclick is applied in the XML code
+    //this function is called to access the Camera
     fun uploadimage(v: View?) {
+
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         startActivityForResult(intent, 101)
     }
 
+    //this func always run after assigned tasks are over
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK) {
@@ -38,6 +48,9 @@ class uploadcam : AppCompatActivity() {
         }
     }
 
+    //This function defines what to do when capture image
+    //Captures and then compresses the image
+    // after this call the uploadtoFirebase()
     private fun onCaptureImageResult(data: Intent?) {
         val thumbnail = data!!.extras!!["data"] as Bitmap?
         val bytes = ByteArrayOutputStream()
@@ -46,18 +59,19 @@ class uploadcam : AppCompatActivity() {
         uploadToFirebase(bb)
     }
 
+    //the paramter is received from onCaptureImageResult() and used to save in the Storage
     private fun uploadToFirebase(bb: ByteArray) {
-
-//        String phone = "1111";
-        // myimages/1111_first.jpg
         val userid = FirebaseAuth.getInstance().currentUser!!.uid
         val sr = mstorageref!!.child(userid+"/a" + ".jpg")
         sr.putBytes(bb).addOnSuccessListener {
+            //if saving successful then
+            //display a toast and move to next activity
             Toast.makeText(this@uploadcam, "success", Toast.LENGTH_SHORT).show()
             startActivity(Intent(applicationContext, home::class.java))
             finish()
 
         }
+                //if failed display failed to load
             .addOnFailureListener {
                 Toast.makeText(
                     this@uploadcam,

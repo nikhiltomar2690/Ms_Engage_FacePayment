@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Binding is used to Bind all elemets without finding elements everytime
+        //This activity is used to move to login activity
         binding.btnget.setOnClickListener {
             val intent = Intent(this@MainActivity, login::class.java)
             startActivity(intent)

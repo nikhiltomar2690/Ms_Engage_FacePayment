@@ -13,26 +13,38 @@ import java.io.IOException
 
 class home : AppCompatActivity() {
 
+    //Initialising Firebase Auth
     lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        //Instance for Firebase Auth
         auth= FirebaseAuth.getInstance()
         var currentUser=auth.currentUser
 
+        // Linking all XML elements with val
         val logout =findViewById<Button>(R.id.idLogout)
         val buygta = findViewById<Button>(R.id.buygta)
         val buyvalo = findViewById<Button>(R.id.buyvalo)
-
         val hyperx = findViewById<ImageView>(R.id.hyperx)
         val fortnite = findViewById<ImageView>(R.id.fortnite)
         val cod = findViewById<ImageView>(R.id.cod)
         val fifa = findViewById<ImageView>(R.id.fifa)
+        val notifi = findViewById<Button>(R.id.idnoti)
 
+        //Checking if user is loggedIn or Not
         if(currentUser==null){
             startActivity(Intent(this,MainActivity::class.java))
             finish()
+        }
+
+
+        // Onclick Action for all elements
+        notifi.setOnClickListener{
+            val intent = Intent(this@home,notification::class.java)
+            startActivity(intent)
         }
 
         buygta.setOnClickListener{
@@ -60,7 +72,7 @@ class home : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        //Logout Button Onlick
         logout.setOnClickListener{
             auth.signOut()
             startActivity(Intent(this,MainActivity::class.java))

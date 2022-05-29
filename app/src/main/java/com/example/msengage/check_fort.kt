@@ -10,6 +10,8 @@ class check_fort : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_fort)
 
+        // Activity for Fortnite Battlepass
+
         val buy = findViewById<Button>(R.id.buy1)
 
         buy.setOnClickListener{

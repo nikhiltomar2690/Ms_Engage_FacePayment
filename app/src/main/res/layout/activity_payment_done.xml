@@ -4,18 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uploadcam"
+    tools:context=".payment_done"
     android:background="@color/black">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="620dp"
+        android:layout_height="620dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="order_done.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/upload"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:fontFamily="@font/poppinsmedium"
+        android:fontFamily="@font/poppinssemibold"
         android:textAllCaps="false"
         android:background="@drawable/buttonround"
-        android:onClick="uploadimage"
-        android:text="Scan face for KYC"
+        android:text="Back to Home"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,15 +38,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.864" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="315dp"
-        android:layout_height="315dp"
-        app:lottie_fileName="kyc-anim.json"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_speed="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

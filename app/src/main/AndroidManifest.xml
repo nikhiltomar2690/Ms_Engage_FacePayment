@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Msengage">
         <activity
+            android:name=".notification"
+            android:exported="false" />
+        <activity
+            android:name=".payment_done"
+            android:exported="false" />
+        <activity
             android:name=".check_gta"
             android:exported="false" />
         <activity

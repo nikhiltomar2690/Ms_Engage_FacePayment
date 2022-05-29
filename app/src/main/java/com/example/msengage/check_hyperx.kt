@@ -9,6 +9,9 @@ class check_hyperx : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_hyperx)
+
+        // Activity for HyperX Headphones
+
         val buy = findViewById<Button>(R.id.buy1)
 
         buy.setOnClickListener{

@@ -16,11 +16,12 @@
         android:layout_marginTop="20dp"
         android:gravity="center|bottom"
         android:layout_weight="1">
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/otpimage"
-            android:paddingBottom="40dp"/>
+            android:layout_width="310dp"
+            android:layout_height="310dp"
+            android:paddingBottom="40dp"
+            android:src="@drawable/otpimage" />
     </LinearLayout>
 
     <LinearLayout

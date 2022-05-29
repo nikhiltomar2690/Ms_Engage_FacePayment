@@ -10,6 +10,8 @@ class check_gta : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_gta)
 
+        // Activity for GTA CD+Key
+
         val buy = findViewById<Button>(R.id.buy1)
 
         buy.setOnClickListener{

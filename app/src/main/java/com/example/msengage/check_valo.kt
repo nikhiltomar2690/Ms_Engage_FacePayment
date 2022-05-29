@@ -17,6 +17,9 @@ class check_valo : AppCompatActivity() {
         setContentView(R.layout.activity_check_valo)
         val buy = findViewById<Button>(R.id.buy1)
 
+        // Activity for Valorant Battlepass
+
+
         buy.setOnClickListener{
             val intent = Intent(this@check_valo,finalpayface::class.java)
             startActivity(intent)

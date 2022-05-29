@@ -13,6 +13,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 
 class otpenter : AppCompatActivity() {
 
+    //Initialising variable for Firebase Authentication
     lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +23,11 @@ class otpenter : AppCompatActivity() {
         auth=FirebaseAuth.getInstance()
         val storedVerificationId=intent.getStringExtra("storedVerificationId")
 
+        //Declaring Verification Variables
         val verify = findViewById<Button>(R.id.verifyBtn)
         val otpbox = findViewById<EditText>(R.id.id_otp)
 
+        //Getting OTP entered and storing it
         verify.setOnClickListener{
             var otp=otpbox.text.toString().trim()
             if(!otp.isEmpty()){
@@ -32,27 +35,27 @@ class otpenter : AppCompatActivity() {
                     storedVerificationId.toString(), otp)
                 signInWithPhoneAuthCredential(credential)
             }else{
+
+                //If left empty this toast pops up
                 Toast.makeText(this,"Enter OTP",Toast.LENGTH_SHORT).show()
             }
         }
 
     }
+    //Verifying if user entered OTP is valid or not
+    //If user verified then allow to move to Kyc Activity
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // read first name last name from firebase
-                    // check if empty / null
-                    // if yes -> start activity
-                    // else -> main activity or jo bhi
 
-                    startActivity(Intent(applicationContext, signup::class.java))
+
+                    startActivity(Intent(applicationContext, uploadcam::class.java))
                     finish()
 // ...
                 } else {
-// Sign in failed, display a message and update the UI
+                    //Invalid OTP then show invalid otp message
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
-// The verification code entered was invalid
                         Toast.makeText(this,"Invalid OTP",Toast.LENGTH_SHORT).show()
                     }
                 }

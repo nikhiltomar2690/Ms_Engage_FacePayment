@@ -10,6 +10,8 @@ class check_fifa : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_fifa)
 
+        // Activity for Fifa Product
+
         val buy = findViewById<Button>(R.id.buy1)
 
         buy.setOnClickListener{

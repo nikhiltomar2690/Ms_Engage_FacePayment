@@ -11,6 +11,8 @@ class check_cod : AppCompatActivity() {
         setContentView(R.layout.activity_check_cod)
         val buy = findViewById<Button>(R.id.buy1)
 
+       // Activity for CallofDuty Battlepass
+
         buy.setOnClickListener{
             val intent = Intent(this@check_cod,finalpayface::class.java)
             startActivity(intent)
