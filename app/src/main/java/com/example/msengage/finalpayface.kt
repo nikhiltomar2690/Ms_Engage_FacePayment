@@ -209,7 +209,7 @@ class finalpayface : AppCompatActivity() {
                     val intent =Intent(this@finalpayface,payment_done::class.java)
                     startActivity(intent)
                 }
-                else if(result<0.80){
+                if(result<0.80){
                     Toast.makeText(applicationContext,"Faces do not match",Toast.LENGTH_SHORT).show()
                 }
 
