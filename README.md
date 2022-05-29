@@ -58,7 +58,7 @@ To change a permission setting, tap it, then choose Allow or Don't allow.
 
 The following apk can be used to download the application directly on the mobile 
 
-https://drive.google.com/file/d/1Ea6AcZVQhwOJQL58Qjw-A7SpRPIKEK75/view?usp=sharing
+https://drive.google.com/file/d/1oAieq__LAzJs_keHRd4Qf_dyV5mjoffq/view?usp=sharing
     
 ## FAQ
 
