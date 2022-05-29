@@ -46,6 +46,9 @@ To change a permission setting, tap it, then choose Allow or Don't allow.
 
 ![lol](https://user-images.githubusercontent.com/81950754/170866889-460b4826-bb3e-43b9-bd56-e2cbdce11342.png)
 
+![lol2](https://user-images.githubusercontent.com/81950754/170867110-b70ed1f6-de89-480f-8b1a-99c2910fb82a.png)
+
+
 
 ## Project Resources
 
