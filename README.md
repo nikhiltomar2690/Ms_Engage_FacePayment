@@ -58,7 +58,7 @@ Video Link :
 
 The following apk can be used to download the application directly on the mobile 
 
-
+https://drive.google.com/file/d/1Ea6AcZVQhwOJQL58Qjw-A7SpRPIKEK75/view?usp=sharing
     
 ## FAQ
 
