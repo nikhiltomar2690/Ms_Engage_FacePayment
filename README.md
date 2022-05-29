@@ -7,6 +7,11 @@ Face Payment In Ecommerce Platform
 
 Face recognition technology is now available as an eCommerce payment option. With the new Face Recognition feature, your customers can pay quickly and easily using their face instead of entering credit card information. The system works by scanning the customer’s face and comparing it to a database of known faces stored in the cloud. Customers simply have to place their face within the camera’s range and they are ready to go.
 
+
+## Project Resources
+
+Video Link :
+
 ## Tech Stack
 
 **Client:** Developed App using Android Studio and Kotlin as programming language
@@ -48,11 +53,6 @@ To change a permission setting, tap it, then choose Allow or Don't allow.
 
 ![lol2](https://user-images.githubusercontent.com/81950754/170867110-b70ed1f6-de89-480f-8b1a-99c2910fb82a.png)
 
-
-
-## Project Resources
-
-Video Link :
 
 ## Installation
 
