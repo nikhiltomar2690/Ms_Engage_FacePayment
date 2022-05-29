@@ -1,16 +1,14 @@
 
-# Project Title
+# Face Payment In Ecommerce Platform
 
 Microsoft Engage 2022
-
-Face Payment In Ecommerce Platform
 
 Face recognition technology is now available as an eCommerce payment option. With the new Face Recognition feature, your customers can pay quickly and easily using their face instead of entering credit card information. The system works by scanning the customer’s face and comparing it to a database of known faces stored in the cloud. Customers simply have to place their face within the camera’s range and they are ready to go.
 
 
 ## Project Resources
 
-Video Link :
+Video Link : https://youtu.be/WRhOP_IQJ48
 
 ## Tech Stack
 
